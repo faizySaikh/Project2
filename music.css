@@ -1,0 +1,1773 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+}
+
+/* Container Styling */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
+    background-color: #000;
+    /* Optional: ensure a solid background */
+}
+
+/* Logo Styling */
+.logo {
+    position: absolute  ;
+    top: 1rem;
+    left: 1rem;
+    width: 17rem;
+    margin-top: 4%;
+    margin-left: 10%;
+    /* Adjusted for high-res screens */
+    height: auto;
+    z-index:  10;
+}
+
+/* Background Image Styling */
+.background-image {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    top: 9.6%;
+    background-image: url('BACK.jpeg');
+    /* Replace with your actual background image */
+    background-size: 70% 60vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translate(-20%, 10%);
+    z-index: 0;
+    filter: brightness(95%);
+    background-color: transparent;
+    /* Darken the background for better text contrast */
+}
+
+/* Box Styling */
+.box {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+    max-width: 100%;
+    /* height: 48vh; */
+    top: 10%;
+    margin: 0 auto;
+    margin-right: 10%;
+}
+
+/* Headings Styling */
+.box h1 {
+    font-size: 6rem;
+    /* margin-bottom: 0rem; */
+    color: rgb(222, 28, 28);
+}
+
+.box h2 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    margin-left: 49%;
+}
+
+/* Paragraph Styling */
+.box p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    margin-left: 12%;
+}
+
+/* Button Styling */
+.btn {
+    font-size: 1rem;
+    color: #fff;
+    background-color: #dc2020;
+    /* Primary color */
+    border: none;
+    outline: none;
+    padding: 0.5rem 2rem;
+    border-radius: 4rem;
+    cursor: pointer;
+    margin-left: 60%;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #f72403;
+    /* Darker shade for hover effect */
+}
+
+/* Second Section Styling */
+.second {
+    display: flex;
+    flex-wrap: nowrap;
+    /* Default to no wrapping */
+    justify-content: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    /* Light background for contrast */
+}
+
+.box1,
+.box2 {
+    flex: 1;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* Box1 Styling */
+.box1 {
+    max-width: 600px;
+    margin: 1rem;
+}
+
+.box1 h1.pro {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.box1 h3.over {
+    font-size: 1.1rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+
+.box1 h4.with {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+    width: 80%;
+}
+
+.box1 p {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    width: 90%;
+}
+
+.box1 .HD {
+    font-size: 1rem;
+    color: #fff;
+    background-color: rgb(201, 32, 32);
+    border: none;
+    outline: none;
+    padding: 0.4rem 1.1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.box1 .HD:hover {
+    background-color: #f91202;
+}
+
+/* Box2 Styling */
+.box2 {
+    max-width: 600px;
+    margin: 1rem;
+}
+
+.box2 img.head {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    bottom: 120px;
+    display: block;
+}
+
+.level {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f9f9f9;
+}
+
+/* Left Side Styling */
+.left-side {
+    position: relative;
+    /* Position relative to position the overlay text */
+    flex: 0 0 400px;
+    /* Fixed width for left side */
+    height: 100%;
+    /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 10%;
+    /* Optional: background color for left side */
+}
+
+.bg-img {
+    width: 186%;
+    /* Responsive width */
+    height: 50vh;
+    /* Maintain aspect ratio */
+    max-width: 700px;
+    /* Max width */
+    max-height: 500px;
+    /* Max height */
+    opacity: 0.1;
+    margin-bottom: 55%;
+}
+
+/* Text Overlay Styling */
+.text-overlay {
+    position: absolute;
+    margin-bottom: 36%;
+    /* left: 30%; */
+    width: 130%;
+    /* transform: translate(-50%, -50%); */
+    /* Center the overlay text */
+    color: #201f1f;
+    /* Text color */
+    /* text-align: center; */
+    padding: 3rem;
+    background: transparent;
+    /* Semi-transparent background for readability */
+    border-radius: 0.5rem;
+
+}
+
+.text-overlay h1 {
+    font-size: 2.9rem;
+    margin-bottom: 2rem;
+}
+
+.text-overlay h3 {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    font-weight: normal;
+}
+
+.text-overlay p {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    position: relative;
+    font-weight: normal;
+}
+
+.RD {
+    font-size: 1rem;
+    color: #fff;
+    background-color: #dc2020;
+    /* Primary color */
+    border: none;
+    outline: none;
+    padding: 0.5rem 2rem;
+    border-radius: 4rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.level .RD:hover {
+    background-color: #f91202;
+}
+
+/* Right Side Styling */
+.right-side {
+    flex: 1;
+    /* Takes up the remaining space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Optional: background color for right side */
+}
+
+.right-img {
+    width: 100%;
+    max-width: 50%;
+    /* Responsive width */
+    height: auto;
+    /* Maintain aspect ratio */
+    max-height: 60%;
+    /* Ensures image fits within its container */
+    margin-bottom: 15%;
+}
+
+.vid {
+    width: 100%;
+    height: 82%;
+    position: relative;
+    bottom: 26vh;
+}
+
+.you {
+    width: 100%;
+    height: 82%;
+}
+
+.ear {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f9f9f9;
+    position: relative;
+    bottom: 41%;
+}
+
+.mob {
+    position: relative;
+    flex: 0 0 790px;
+    height: 64%;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.scrn {
+    width: 100%;
+    max-width: 799px;
+    left: 0;
+}
+
+.music {
+    width: 100%;
+    margin-right: 10%;
+    position: absolute;
+    max-width: 460px;
+    left: 60%;
+    transform: translate(-10%, 27%);
+}
+
+.music .feel {
+    font-size: 3rem;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.music .over {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-left: 18.9rem;
+    margin-bottom: 1rem;
+}
+
+.music .at {
+    width: 100%;
+    max-width: 350px;
+    font-weight: normal;
+    font-size: 0.8rem;
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+}
+
+.music .font {
+    font-size: 1rem;
+    color: #fff;
+    background-color: #dc2020;
+    /* Primary color */
+    border: none;
+    outline: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4rem;
+    cursor: pointer;
+    margin-left: 17rem;
+    transition: background-color 0.3s;
+}
+
+.music .font:hover {
+    background-color: #f91202;
+}
+
+.All {
+    margin-left: 8%;
+    margin-right: 8%;
+    text-align: center;
+    position: relative;
+    bottom: 70%;
+    background-color: #f9f9f9;
+}
+
+/* Style the card container */
+.card {
+    display: flex;
+    justify-content: space-around;
+    /* Space between items */
+    flex-wrap: wrap;
+    /* Wrap items if needed */
+    gap: 20px;
+    /* Gap between items */
+}
+
+/* Style each box */
+.box3 {
+    width: 250px;
+    /* Width of the box */
+    height: 380px;
+    /* Height of the box */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* Stack children vertically */
+    align-items: center;
+    /* Center children horizontally */
+    justify-content: center;
+    /* Center children vertically */
+    border: 1px solid #ddd;
+    /* Optional: border for better visualization */
+    border-radius: 8px;
+    /* Optional: rounded corners */
+    overflow: hidden;
+    /* Ensure content stays inside the box */
+    padding: 20px;
+    /* Space between image and text */
+    box-sizing: border-box;
+    /* Include padding in width/height */
+}
+
+/* Style images inside the boxes */
+.box3 img {
+    max-width: 100%;
+    /* Ensure image scales inside the box */
+    max-height: 100%;
+    /* Limit image height to keep text below visible */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the box */
+    margin-bottom: 10px;
+    /* Space between image and text */
+}
+
+/* Style text and pricing */
+.box3 .tex {
+    text-align: center;
+    /* Center text inside .tex */
+}
+
+/* Center the .pin-code container */
+.pin-code {
+    display: flex;
+    align-items: center;
+    /* Center items vertically */
+    justify-content: center;
+    /* Space between image and text */
+    /* Center horizontally */
+    max-width: 100%;
+    /* Full width of the container */
+    /* Add some padding around the container */
+    box-sizing: border-box;
+    /* Include padding in width */
+    position: relative;
+    bottom: 59%;
+}
+
+/* Style the image container */
+.pin {
+    flex: 1;
+    /* Allow image container to take up space */
+    display: flex;
+    align-items: center;
+    /* Center image vertically */
+    justify-content: center;
+    /* Center image horizontally */
+}
+
+/* Style the image */
+.pin img {
+    width: 500px;
+    /* Set the width of the image */
+    height: 450px;
+    /* Set the height of the image */
+    object-fit: cover;
+    /* Ensure image covers the box */
+    margin-left: 60%;
+}
+
+/* Style the text container */
+.pin-text {
+    flex: 2;
+    /* Allow text container to take up more space */
+    padding-left: 20px;
+    /* Space between image and text */
+    margin-left: 8%;
+    margin-top: 6%;
+}
+
+/* Center text within the text container */
+/* .pin-text h1, .pin-text p, .pin-text ul {
+    margin: 0;
+    padding: 1rem;
+} */
+
+.pin-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.pin-text p {
+    font-size: 1.4rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+
+.pin-text ul {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    line-height: 40px;
+}
+
+/* Style the unordered list */
+.pin-text ul {
+    list-style-type: disc;
+    /* Bullet points for list items */
+    padding-left: 20px;
+    /* Space for bullets */
+}
+
+/* Style the button */
+.pin-text button.list {
+    font-size: 0.8rem;
+    color: #fff;
+    background-color: #dc2020e8;
+    /* Primary color */
+    border: none;
+    outline: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 4rem;
+    cursor: pointer;
+    margin-left: 2%;
+    transition: background-color 0.3s;
+}
+
+.pin-text button.list:hover {
+    background-color: red;
+}
+
+.EAR {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    bottom: 34%;
+}
+
+.SCR {
+    width: 100%;
+    height: 97vh;
+}
+
+.info-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Sets a 10px gap between flex items */
+    /* margin-left: 20%;
+    margin-right: 20%; */
+    padding: 20px;
+    /* Add padding for better spacing around the section */
+    box-sizing: border-box;
+    position: relative;
+    bottom: 30%;
+    /* Ensures padding and margin are included in the element's total width and height */
+}
+
+.info-image img {
+    width: 100%;
+    /* Makes image responsive */
+    max-width: 500px;
+    /* Limits the maximum width of the image */
+    height: auto;
+    margin-left: 0;
+    /* Maintains the aspect ratio */
+}
+
+.info-image .Faiz {
+    width: 630px;
+}
+
+.info-content {
+    display: flex;
+}
+
+.manufacturer-info,
+.other-features {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10%;
+
+    /* Ensures that headings and lists stack vertically */
+    h1 {
+        font-size: 1.2rem;
+        position: relative;
+        right: 10%;
+    }
+}
+
+.info-details {
+    margin-top: 10%;
+
+    h2 {
+        position: relative;
+        right: 12%;
+        font-size: 1.5rem;
+    }
+
+    strong {
+        color: red;
+    }
+}
+
+.other-features {
+    margin-top: 10%;
+
+    h2 {
+        position: relative;
+        right: 30%;
+    }
+
+    ul li {
+        position: relative;
+        right: 20%;
+    }
+}
+
+.info-details ul,
+.other-features ul {
+    margin: 1rem;
+    /* Removes default margin */
+    font-size: 1rem;
+    position: relative;
+    right: 10%;
+}
+
+.info-details li,
+.other-features li {
+    margin-bottom: 10px;
+    /* Adds space between list items */
+}
+
+.info-details li strong,
+.other-features li strong {
+    display: flex;
+    /* Ensures <strong> elements are on their own line */
+    margin-bottom: 5px;
+    /* Adds space below <strong> elements */
+    font-size: 1rem;
+}
+
+/* Basic styling for the footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows items to wrap in smaller screens */
+    gap: 20px;
+    /* Space between sections */
+    justify-content: space-between;
+    /* Distribute space between sections */
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    /* Allows flexibility in size */
+}
+
+.footer-section h3 {
+    margin-top: 0;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    /* Removes bullet points */
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-media ul li a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+
+/* Responsive Styling */
+@media (max-width: 1280px) {
+
+    /* Large screens like tablets */
+    .logo {
+        width: 19rem;
+        margin-top: 6%;
+        margin-left: 12%;
+    }
+
+    .box {
+        max-width: 100%;
+        margin-top: 6%;
+    }
+
+    .box h1 {
+        font-size: 5.8rem;
+    }
+
+    .box h2 {
+        font-size: 4rem;
+    }
+
+    .box p {
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        font-size: 1.4rem;
+        padding: 0.8rem 1.9rem;
+    }
+
+    .box1 h1.pro {
+        font-size: 3.75rem;
+    }
+
+    .box1 h3.over {
+        font-size: 1.25rem;
+    }
+
+    .box1 h4.with {
+        font-size: 1rem;
+    }
+
+    .box1 p {
+        font-size: 1rem;
+    }
+
+    .box1 .HD {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .box2 {
+        max-width: 900px;
+
+    }
+
+    .box2 img.head {
+        width: 100%;
+        height: 83vh;
+        display: block;
+    }
+
+    .level {
+        width: 100%;
+        height: 97vh;
+        margin-left: 4%;
+    }
+
+    .bg-img {
+        max-width: 100%;
+        max-height: 59%;
+        margin-top: -30%;
+    }
+
+    .text-overlay {
+        padding: 1rem;
+        width: 130%;
+        margin-bottom: 70%;
+        right: 1%;
+    }
+
+    .text-overlay h1 {
+        font-size: 3rem;
+    }
+
+    .text-overlay h3 {
+        font-size: 1.25rem;
+    }
+
+    .text-overlay p {
+        font-size: 1.2rem;
+    }
+
+    .right-img {
+        margin-top: -10%;
+        width: 100%;
+        max-width: 550px;
+    }
+
+    .music {
+        width: 100%;
+        margin-right: 10%;
+        position: absolute;
+        max-width: 580px;
+        left: 65%;
+        transform: translate(-27%, 10%);
+    }
+
+    .music .feel {
+        font-size: 4.8rem;
+        margin-left: 5rem;
+        margin-bottom: 1rem;
+    }
+
+    .music .over {
+        font-size: 1.8rem;
+        font-weight: normal;
+        margin-left: 17.9rem;
+        text-decoration: underline rgb(54, 232, 5);
+        margin-bottom: 1rem;
+    }
+
+    .music .at {
+        width: 100%;
+        max-width: 390px;
+        font-weight: normal;
+        font-size: 1.3rem;
+        margin-left: 5.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .music .font {
+        margin-left: 20rem;
+        padding: 1rem 1.8rem;
+    }
+
+    .mob {
+        position: relative;
+        height: 80%;
+        display: flex;
+        right: 8%;
+        /* justify-content: center;
+        align-items: center; */
+    }
+
+    .scrn {
+        width: 100%;
+        max-width: 799px;
+        left: 0;
+    }
+
+    .All {
+        margin-left: 5%;
+        margin-right: 5%;
+        text-align: center;
+        position: relative;
+        bottom: 50%;
+    }
+
+    .box3 img {
+        max-width: 110%;
+        /* Ensure image scales inside the box */
+        max-height: 150%;
+        /* Limit image height to keep text below visible */
+        object-fit: cover;
+        /* Maintain aspect ratio and cover the box */
+        margin-bottom: 10px;
+        /* Space between image and text */
+    }
+
+    .pin-code {
+        bottom: 36%;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    /* Medium screens like tablets in landscape */
+    .logo {
+        width: 29rem;
+        margin-top: 15%;
+    }
+
+    .box {
+        max-width: 100%;
+        margin-top: 40%;
+    }
+
+    .box h1 {
+        font-size: 5.9rem;
+    }
+
+    .box h2 {
+        font-size: 4rem;
+        margin-right: -3%;
+    }
+
+    .box p {
+        font-size: 1.2rem;
+        line-height: 45px;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+        padding: 0.9rem 1.9rem;
+    }
+    .background-image{
+        width: 100%;
+        /* height: 60vh;
+        margin-top: 32.7%; */
+        background-size: 100% 50vh;
+        margin-left: -8%;
+        margin-top: 6%;
+    }
+
+    .box1 {
+        max-width: 100%;
+    }
+
+    .box2 {
+        max-width: 100%;
+    }
+
+    .box2 {
+        max-width: 600px;
+        margin: 1rem;
+    }
+
+    .box2 img.head {
+        width: 100%;
+        height: 38vh;
+        position: relative;
+        bottom: 0;
+        display: block;
+        right: 90px;
+    }
+
+    .bg-img {
+        max-width: 99%;
+        max-height: 35%;
+        margin-right: 40%;
+    }
+
+    .text-overlay {
+        padding: 0.5rem;
+        width: 100%;
+        margin-right: 26%;
+    }
+
+    .text-overlay h1 {
+        font-size: 3.1rem;
+    }
+
+    .text-overlay h3 {
+        font-size: 1.8rem;
+    }
+
+    .text-overlay p {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+
+    .right-img {
+        margin-top: -29%;
+        width: 100%;
+        max-width: 550px;
+    }
+
+    .music {
+        width: 100%;
+        margin-right: 10%;
+        position: absolute;
+        max-width: 580px;
+        left: 65%;
+        transform: translate(-27%, 13%);
+    }
+
+    .music .feel {
+        font-size: 4.8rem;
+        margin-left: 5rem;
+        margin-bottom: 1rem;
+    }
+
+    .music .over {
+        font-size: 1.8rem;
+        font-weight: normal;
+        margin-left: 4.9rem;
+        text-decoration: underline rgb(54, 232, 5);
+        margin-bottom: 2.3rem;
+    }
+
+    .music .at {
+        width: 100%;
+        max-width: 390px;
+        font-weight: normal;
+        font-size: 1.4rem;
+        margin-left: 3.8rem;
+        line-height: 30px;
+        margin-bottom: 1rem;
+    }
+
+    .music .font {
+        margin-left: 17rem;
+        padding: 1rem 1.8rem;
+    }
+
+    .mob {
+        position: relative;
+        height: 70%;
+        display: flex;
+        right: 32%;
+        /* justify-content: center;
+        align-items: center; */
+    }
+
+    .scrn {
+        width: 100%;
+        max-width: 779px;
+        left: 0;
+    }
+
+    .All {
+        margin-left: 3%;
+        margin-right: 3%;
+        text-align: center;
+        position: relative;
+        bottom: 64%;
+    }
+
+    .box3 img {
+        max-width: 150%;
+        /* Ensure image scales inside the box */
+        max-height: 150%;
+        /* Limit image height to keep text below visible */
+        object-fit: cover;
+        /* Maintain aspect ratio and cover the box */
+        margin-bottom: 10px;
+        /* Space between image and text */
+    }
+
+    .pin-code {
+        bottom: 55%;
+    }
+
+    .pin img {
+        width: 500px;
+        /* Set the width of the image */
+        height: 450px;
+        /* Set the height of the image */
+        object-fit: cover;
+        /* Ensure image covers the box */
+        margin-left: 20%;
+    }
+
+    .pin-text {
+        flex: 2;
+        /* Allow text container to take up more space */
+        padding-left: 20px;
+        /* Space between image and text */
+        margin-left: 0;
+        margin-top: 6%;
+    }
+
+    .pin-text button.list {
+        padding: 1rem 1.9rem;
+        font-size: 1.5rem;
+    }
+
+    .SCR {
+        width: 100%;
+        height: 77vh;
+    }
+}
+
+@media (max-width:930px) {
+    .box {
+        max-width: 100%;
+        margin-top: 12%;
+        margin-left: 10%;
+    }
+
+    .box h1 {
+        font-size: 8.9rem;
+        margin-left: 39%;
+    }
+
+    .box h2 {
+        font-size: 4rem;
+        margin-right: -3%;
+    }
+
+    .box p {
+        font-size: 2rem;
+        line-height: 45px;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+        padding: 0.9rem 1.9rem;
+    }
+    .background-image{
+        width: 100%;
+        /* height: 60vh;
+        margin-top: 32.7%; */
+        background-size: 100% 50vh;
+        margin-left: -16%;
+        margin-top: 6%;
+    }
+    .info-section {
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        /* Center items horizontally */
+        position: relative;
+        bottom: 46%;
+    }
+
+    .info-image {
+        margin-bottom: 20px;
+        /* Adds space between the image and content */
+    }
+
+    .info-content {
+        width: 100%;
+        /* Makes content take full width on small screens */
+        position: relative;
+        right: -10%;
+    }
+}
+
+@media (max-width: 880px) {
+    .box {
+        max-width: 100%;
+        margin-top: 12%;
+        margin-left: 10%;
+    }
+
+    .box h1 {
+        font-size: 8.9rem;
+        margin-left: 39%;
+    }
+
+    .box h2 {
+        font-size: 4rem;
+        margin-right: -3%;
+    }
+
+    .box p {
+        font-size: 2rem;
+        line-height: 45px;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+        padding: 0.9rem 1.9rem;
+    }
+    .background-image{
+        width: 100%;
+        /* height: 60vh;
+        margin-top: 32.7%; */
+        background-size: 100% 50vh;
+        margin-left: -16%;
+        margin-top: 6%;
+    }
+    .right-img {
+        width: 100%;
+        height: 70vh;
+        max-width: 590px;
+        margin-bottom: 50%;
+    }
+
+    .mob {
+        position: relative;
+        height: 70%;
+        display: flex;
+        right: 38%;
+        /* justify-content: center;
+        align-items: center; */
+    }
+
+    .scrn {
+        width: 100%;
+        max-width: 649px;
+        left: 0;
+    }
+
+    .music {
+        width: 100%;
+        margin-right: 10%;
+        position: absolute;
+        max-width: 580px;
+        left: 59%;
+        transform: translate(-27%, 8%);
+    }
+
+    .pin-code {
+        bottom: 55%;
+    }
+
+    .pin img {
+        width: 500px;
+        /* Set the width of the image */
+        height: 450px;
+        /* Set the height of the image */
+        object-fit: cover;
+        /* Ensure image covers the box */
+        margin-left: -13%;
+    }
+
+    .pin-text {
+        flex: 2;
+        /* Allow text container to take up more space */
+        padding-left: 20px;
+        /* Space between image and text */
+        margin-left: -15%;
+        margin-top: 6%;
+    }
+}
+
+@media (max-width: 800px) {
+
+    /* Wrap items if viewport width is 800px or less */
+    .second {
+        flex-wrap: wrap;
+        /* Allow wrapping */
+    }
+
+    .box1 h1.pro {
+        font-size: 4rem;
+    }
+
+    .box1 h3.over {
+        font-size: 1.45rem;
+        margin-bottom: 3rem;
+    }
+
+    .box1 h4.with {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+
+    .box1 p {
+        font-size: 1.2rem;
+    }
+
+    .box1 .HD {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .box1,
+    .box2 {
+        flex: 1 1 100%;
+        /* Take full width on small screens */
+        max-width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .box2 {
+        max-width: 600px;
+        margin: 1rem;
+    }
+
+    .box2 img.head {
+        width: 100%;
+        height: 36vh;
+        position: relative;
+        bottom: 0;
+        display: block;
+        right: 0;
+    }
+
+    .right-img {
+        margin-top: -29%;
+        width: 100%;
+        max-width: 550px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Small screens like mobile devices */
+    .logo {
+        width: 7rem;
+    }
+
+    .box {
+        max-width: 90%;
+    }
+
+    .box h1 {
+        font-size: 1.5rem;
+    }
+
+    .box h2 {
+        font-size: 1rem;
+    }
+
+    .box p {
+        font-size: 0.75rem;
+    }
+
+    .btn {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .box1 h1.pro {
+        font-size: 4rem;
+    }
+
+    .box1 h3.over {
+        font-size: 1.45rem;
+        margin-bottom: 3rem;
+    }
+
+    .box1 h4.with {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+
+    .box1 p {
+        font-size: 1.2rem;
+    }
+
+    .box1 .HD {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .box1,
+    .box2 {
+        flex: 1 1 100%;
+        /* Take full width on small screens */
+        max-width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .box2 {
+        max-width: 600px;
+        margin: 1rem;
+    }
+
+    .box2 img.head {
+        width: 100%;
+        height: 36vh;
+        position: relative;
+        bottom: 0;
+        display: block;
+        right: 0;
+    }
+
+    .music {
+        width: 100%;
+        margin-right: 10%;
+        position: absolute;
+        max-width: 580px;
+        left: 61%;
+        transform: translate(-27%, 4%);
+    }
+}
+
+@media (max-width: 690px) {
+    .level {
+        width: 100%;
+        height: 100vh;
+        display: block;
+    }
+
+    .bg-img {
+        max-width: 169%;
+        max-height: 46%;
+        margin-left: 12%;
+        margin-top: 20%;
+    }
+
+    .text-overlay {
+        padding: 0.5rem;
+        width: 98%;
+        max-width: 500px;
+        margin-right: 14%;
+        margin-top: 47%;
+    }
+
+    .text-overlay h1 {
+        font-size: 2.9rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .text-overlay h3 {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .text-overlay p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .right-side {
+        width: 100%;
+        height: 150vh;
+        position: relative;
+        right: 4%;
+        bottom: 40%;
+    }
+
+    .All {
+        margin-left: 3%;
+        margin-right: 3%;
+        text-align: center;
+        position: relative;
+        bottom: 5%;
+    }
+
+    .pin-code {
+        flex-wrap: wrap;
+        bottom: 0;
+    }
+
+    .pin,
+    .pin-text {
+        flex: 1 1 100%;
+        margin-left: 0;
+        /* You may adjust the width or other properties as needed */
+    }
+
+    .pin img {
+        margin-left: 0;
+    }
+
+    .pin-text button.list {
+        font-size: 1rem;
+        padding: 0.5rem 1.2rem;
+    }
+
+    .SCR {
+        width: 100%;
+        height: 67vh;
+        position: relative;
+        bottom: 0;
+        top: 38%;
+    }
+
+}
+
+@media (max-width: 610px) {
+    .vid {
+        width: 100%;
+        height: 82%;
+        position: relative;
+        bottom: 0;
+        top: 42%;
+    }
+
+    .mob {
+        position: relative;
+        height: 70%;
+        display: flex;
+        right: 39%;
+        /* justify-content: center;
+        align-items: center; */
+    }
+
+    .scrn {
+        width: 100%;
+        max-width: 409px;
+        left: 0;
+    }
+
+    .music {
+        width: 100%;
+        margin-right: 10%;
+        position: absolute;
+        max-width: 580px;
+        left: 65%;
+        transform: translate(-39%, 2%);
+    }
+
+    .music .feel {
+        font-size: 3.8rem;
+        margin-left: 5rem;
+        margin-bottom: 1rem;
+    }
+
+    .music .over {
+        font-size: 1rem;
+        font-weight: normal;
+        margin-left: 4.9rem;
+        margin-bottom: 2.3rem;
+    }
+
+    .music .at {
+        width: 100%;
+        max-width: 310px;
+        font-weight: normal;
+        font-size: 1rem;
+        margin-left: 4.4rem;
+        line-height: 20px;
+        margin-bottom: 1rem;
+    }
+
+    .music .font {
+        margin-left: 15rem;
+        padding: 0.5rem 1.2rem;
+    }
+
+    .ear {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        background-color: #f9f9f9;
+        position: relative;
+        bottom: 0;
+        top: 17%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Extra small screens like older phones */
+    .logo {
+        width: 5rem;
+    }
+
+    .box {
+        padding: 1rem;
+        max-width: 95%;
+        margin-left: 20%;
+    }
+
+    .box h1 {
+        font-size: 4.25rem;
+    }
+
+    .box h2 {
+        font-size: 3rem;
+        margin-left: 29%;
+    }
+
+    .box p {
+        font-size: 1rem;
+        margin-left: 25%;
+    }
+
+    .btn {
+        font-size: 0.65rem;
+        padding: 0.4rem 0.6rem;
+    }
+
+    .box1 h1.pro {
+        font-size: 3.3rem;
+        margin-left: -2rem;
+        width: 100%;
+    }
+
+    .box1 h3.over {
+        font-size: 1rem;
+        margin-left: -2rem;
+        margin-bottom: 1rem;
+    }
+
+    .box1 h4.with {
+        font-size: 0.9rem;
+        margin-left: -2rem;
+        margin-bottom: 1rem;
+    }
+
+    .box1 p {
+        font-size: 0.6rem;
+        margin-left: -2rem;
+    }
+
+    .box1 .HD {
+        font-size: 0.65rem;
+        padding: 0.4rem 0.6rem;
+        margin-left: -2rem;
+    }
+
+    .head {
+        margin-left: -2rem;
+        position: relative;
+        bottom: 3rem;
+    }
+
+    .bg-img {
+        max-width: 169%;
+        max-height: 46%;
+        margin-left: 12%;
+        margin-top: -25%;
+    }
+
+    .text-overlay {
+        padding: 0.5rem;
+        width: 98%;
+        max-width: 500px;
+        margin-right: 14%;
+        margin-top: 7%;
+    }
+
+    .right-side {
+        width: 100%;
+        height: 150vh;
+        position: relative;
+        right: 4%;
+        bottom: 60%;
+    }
+
+    .mob {
+        position: relative;
+        height: 70%;
+        display: flex;
+        right: 72%;
+        /* justify-content: center;
+        align-items: center; */
+    }
+
+    .scrn {
+        width: 100%;
+        left: 0;
+    }
+
+    .music {
+        width: 100%;
+        margin-right: 10%;
+        position: absolute;
+        max-width: 580px;
+        left: 52%;
+        transform: translate(-39%, 8%);
+    }
+
+    .music .feel {
+        font-size: 3.8rem;
+        margin-left: 5rem;
+        margin-bottom: 1rem;
+    }
+
+    .music .over {
+        font-size: 1.4rem;
+        font-weight: normal;
+        margin-left: 4.9rem;
+        margin-bottom: 2.3rem;
+    }
+
+    .music .at {
+        width: 100%;
+        max-width: 310px;
+        font-weight: normal;
+        font-size: 1.2rem;
+        margin-left: 3.8rem;
+        line-height: 25px;
+        margin-bottom: 1rem;
+    }
+
+    .music .font {
+        margin-left: 12rem;
+        padding: 0.7rem 1.2rem;
+    }
+
+    .SCR {
+        width: 100%;
+        height: 50vh;
+        position: relative;
+        bottom: 0;
+        top: 38%;
+    }
+}
+
+@media (max-width: 395px) {
+    .mob {
+        position: relative;
+        height: 70%;
+        display: flex;
+        right: 75%;
+        /* justify-content: center;
+        align-items: center; */
+    }
+
+    .scrn {
+        width: 100%;
+        left: 0;
+    }
+
+    .music {
+        width: 100%;
+        margin-right: 10%;
+        position: absolute;
+        max-width: 300px;
+        left: 49%;
+        transform: translate(-39%, 2%);
+    }
+
+    .music .feel {
+        font-size: 2.4rem;
+        margin-left: 2.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .music .over {
+        font-size: 1.4rem;
+        font-weight: normal;
+        margin-left: 2.9rem;
+        margin-bottom: 2.3rem;
+    }
+
+    .music .at {
+        width: 100%;
+        max-width: 250px;
+        font-weight: normal;
+        font-size: 1rem;
+        margin-left: 2.9rem;
+        line-height: 20px;
+        margin-bottom: 1rem;
+    }
+
+    .music .font {
+        margin-left: 9rem;
+        width: 47%;
+    }
+}
+
+@media (max-width: 377px) {
+    .mob {
+        position: relative;
+        height: 70%;
+        display: flex;
+        right: 85%;
+        /* justify-content: center;
+        align-items: center; */
+    }
+
+    .scrn {
+        width: 100%;
+        left: 0;
+    }
+
+    .pin img {
+        width: 400px;
+        /* Set the width of the image */
+        height: 400px;
+        /* Set the height of the image */
+        object-fit: cover;
+        /* Ensure image covers the box */
+        margin-left: 2%;
+    }
+}
